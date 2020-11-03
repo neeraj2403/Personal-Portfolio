@@ -187,7 +187,13 @@ header ul li a
 
 /* ------------------------------------------------------------- */
 
-skill{
+.Skill_section h1{
+    color: white;
+    font-size: 40px;
+
+}
+
+.skill{
     width: 500px;
     margin: 50px auto 0;
     padding: 20px;
@@ -264,4 +270,42 @@ skill{
     to {
         width: 70%;
     }
+}
+
+
+
+.heading.white{
+    color: #fff;
+    text-align: center;
+}
+.services .content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    float: left;
+}
+
+.services .content  .servicesBx{
+    padding: 40px 20px;
+    background: #222222;
+    color: #fff;
+    max-width: 340px;
+    margin: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.services .content .servicesBx:hover{
+    background: #2196f3;
+}
+
+.services .content .servicesBx img{
+    max-width: 80px;
+    filter: invert(1);
+}
+
+.services .content .servicesBx h2{
+    font-size: 20px;
+    font-weight: 600;
 }
