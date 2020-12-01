@@ -6,9 +6,10 @@
     font-family: 'Poppins',sans-serif;
     
     
+    
 }
 body{
-    background-color: black;
+    background-color:black;
 }
 section{ 
     padding: 100px;
@@ -308,4 +309,45 @@ header ul li a
 .services .content .servicesBx h2{
     font-size: 20px;
     font-weight: 600;
+}
+
+
+/*------------------------ Portfolio------------------------------------------- */
+
+.control ul li{
+    list-style: none;
+    background-color: white;
+    padding: 5px 15px;
+    color: black;
+    display: inline-block;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.item{
+    position: relative;
+}
+
+.item:hover{
+
+    box-shadow: 2px 2px 12px rgba(5, 5, 5, 0.5);
+    transition: 0.5s;
+    opacity: 0.5;
+        
+}
+
+
+.item span{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.item:hover span{
+    opacity: 1;
+    transition: 0.5s;
 }
