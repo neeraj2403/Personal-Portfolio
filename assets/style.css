@@ -69,14 +69,14 @@ header
     z-index: 1000;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
     transition: 0.5s;
 }
 
 header.sticky{
     background: #fff;
     padding: 20px 100px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, );
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0);
 }
 header.sticky .logo{
     color: #111;
@@ -349,5 +349,156 @@ header ul li a
 
 .item:hover span{
     opacity: 1;
-    transition: 0.5s;
+    transition: 0.2s;
 }
+
+.item:before{
+    content: "";
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(238,235,230,0.644);
+    opacity: 0;
+    position: absolute;
+
+}
+
+.item:hover::before{
+    opacity: 1;
+    transition: 0.3s;
+}
+
+
+
+
+
+/* ----------------------- */
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:7s;
+  }
+  
+  .bg3 {
+    animation-duration:8s;
+  }
+  
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+
+
+  /* ---------------------------------------- */
+.contact{
+      background: #111;
+      
+  }
+  .formbx{
+      min-width: 60% ;
+      
+}
+.content{
+    column-gap: 13em;
+}
+  
+  .formbx form{
+      display: flex;
+      flex-direction: column;
+      float: center;
+  }
+
+  .formbx form h3,
+  .contactInfo h3{
+      color: #fff;
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 10px;
+
+  }
+
+  .formbx form input,
+  .formbx form textarea{
+      margin-bottom: 20px;
+      padding: 15px;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      background: #222;
+      color: #fff;
+      resize: none;
+
+  }
+
+  .formbx form textarea{
+      min-height: 200px;
+  }
+
+  .formbx form input::placeholder,
+  .formbx form textarea::placeholder{
+      color: #999;
+  }
+
+  .formbx form input[type="submit"]{
+      max-width: 100px;
+      background: #2196f3;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+  }
+
+  .contactInfo{
+      min-width: 20%;
+      position: relative;
+  }
+
+  .contactInfo .box{
+      position: relative;
+      padding: 20px 0;
+      display: flex;
+  }
+
+  
+
+  .contactInfo .box .icon{
+      min-width: 40px;
+      padding-top: 4px;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+  }
+
+  .contactInfo .box .text{
+      display: flex;
+      margin-left: 20px;
+      font-size: 16px;
+      color: #fff;
+      flex-direction: column;
+      font-weight: 300;
+  }
+
+
+  .contactInfo .box .text h3{
+      font-weight: 500;
+      color: #2196f3;
+      margin-bottom: 0;
+  }
